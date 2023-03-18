@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var nome = prompt('Qual o seu nome?')
+        var altura = prompt('Qual sua altura em centimetros?')
+        var peso = prompt('Qual o seu peso?')
+        var classificacao = ''
+        // Passo1 Não sei resovler
+        //Passo 2 Converta a altura recebida em centímetros para metros. (basta dividir a altura por 100).
+        altura /= 100
+        var massa = peso / altura
+
+        if(massa <= 18.5 ){
+            classificacao = 'Magreza'
+        }if (massa >= 18.6 && massa < 24.9){
+            classificacao = 'Normal'
+        } if(massa >= 25 && massa <  29.9) {
+            classificacao = 'Sobrepeso'
+        }if(massa >= 30 && massa < 39.9){
+            classificacao = 'Obesidade'
+        }else (massa > 40)
+        classificacao = 'Obesidade grau III'
+        
+        document.write(nome + ' possui índice de massa corporal igual a ' + massa + ' , sendo classificado como: ' + classificacao )
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

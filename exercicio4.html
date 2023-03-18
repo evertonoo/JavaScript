@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .teste1 {
+            background-color: rgb(255, 140, 0);
+        }
+
+        .teste2 {
+            background-color: white;
+        }
+    </style>
+    <script>
+        function acionaCampo() {
+            document.getElementById('campo').style.background = "yellow"
+        }
+        function validaCampo() {
+            var valorCampo = document.getElementById('campo').value
+            if (valorCampo.length < 3) {
+                document.getElementById('teste').style.color = "red"
+            } else {
+                document.getElementById('teste').style.color = "green"
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="campo" type="text" class="t" onfocus="acionaCampo()" onblur="validaCampo()">
+    <p id="teste">Digite 3 Letras ou mais</p>
+</body>
+</html>
